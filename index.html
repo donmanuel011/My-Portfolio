@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don Manuel Francy - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3b82f6", secondary: "#6366f1" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="assets/custom.css" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary"
+          >Don Manuel</a
+        >
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#education"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Education</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Contact
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden w-10 h-10 flex items-center justify-center">
+          <button id="mobileMenuBtn" class="text-gray-800">
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+          <a
+            href="#home"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >About Me</a
+          >
+          <a
+            href="#skills"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#education"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Education</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden"
+      style="
+        background-image: url('https://readdy.ai/api/search-image?query=abstract%20technology%20background%20with%20blue%20gradient%2C%20minimalist%2C%20clean%20design%2C%20soft%20lighting%2C%20perfect%20for%20portfolio%20hero%20section%2C%20professional%2C%20modern%2C%20tech-inspired%20pattern&width=1920&height=1080&seq=123&orientation=landscape');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"
+      ></div>
+      <div class="container mx-auto px-6 relative">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Hi, I'm
+              <span class="text-primary typing-animation" id="typingName"
+                >Don Manuel Francy</span
+              >
+            </h1>
+            <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+              B.Tech Student | Computer Science Engineering specializing in IoT
+            </h2>
+            <p class="text-gray-700 mb-8 max-w-lg">
+              B.Tech CSE student specializing in IoT with Honours in
+              Cybersecurity. Deeply passionate about cybersecurity, AI, and
+              building secure, intelligent tech solutions that make a real-world
+              impact.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap"
+                >View Projects</a
+              >
+              <a
+                href="assets/Resume.pdf"
+                class="border border-gray-300 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap"
+                download="Resume.pdf">Download Resume</a
+              >
+            </div>
+            <div class="mt-8 flex space-x-4">
+              <a
+                href="https://github.com/donmanuel011"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              >
+                <i class="ri-github-fill ri-lg text-gray-700"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/don-manuel-francy-/"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              >
+                <i class="ri-linkedin-fill ri-lg text-gray-700"></i>
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=donmanuelfrancy@gmail.com"
+                target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+              >
+                <i class="ri-mail-fill ri-lg text-gray-700"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+            <p class="text-gray-700 mb-6">
+              I’m a third-year B.Tech Computer Science Engineering student at
+              Christ (Deemed to be University), Bengaluru, specializing in the
+              Internet of Things (IoT) with Honours in Cybersecurity. My
+              academic journey has equipped me with a strong foundation in data
+              structures, algorithms, and software development, while also
+              nurturing my interest in building secure, connected systems.
+            </p>
+            <p class="text-gray-700 mb-6">
+              I'm passionate about cybersecurity, AI, and solving real-world
+              problems through technology. I enjoy exploring how IoT and machine
+              learning can be combined to build smart, impactful solutions, and
+              I actively participate in workshops and tech communities.
+            </p>
+            <p class="text-gray-700 mb-6">
+              I’m keenly interested in developing machine learning models for
+              practical applications such as predictive maintenance in
+              industrial IoT systems. Exploring such real-world use cases helps
+              me strengthen my understanding of data analysis, model
+              development, and the integration of AI in connected environments.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div>
+                <h4 class="font-semibold text-gray-900">Current Status</h4>
+                <p class="text-gray-700">Third Year Student</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Email</h4>
+                <p class="text-gray-700">donmanuelfrancy@gmail.com</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Location</h4>
+                <p class="text-gray-700">Bengaluru, India</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Interests</h4>
+                <p class="text-gray-700">
+                  Cybersecurity, Ethical Hacking, AI & Machine Learning, IoT
+                  Systems, Full-Stack Development
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20Indian%20male%20student%20in%20his%2020s%2C%20wearing%20smart%20casual%20attire%2C%20in%20a%20university%20setting%2C%20natural%20lighting%2C%20professional%20headshot%2C%20friendly%20smile%2C%20clean%20background&width=600&height=800&seq=456&orientation=portrait"
+              alt="Rahul Sharma"
+              class="w-full h-auto rounded-lg shadow-lg object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">My Skills</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Technical Skills -->
+          <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-semibold mb-6 flex items-center">
+              <span
+                class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3"
+              >
+                <i class="ri-code-s-slash-line ri-lg text-primary"></i>
+              </span>
+              Technical Skills
+            </h3>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">C</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">C++</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Java</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Python</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">SQL</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">JavaScript</span>
+                  <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="text-lg font-semibold mt-8 mb-4">Frameworks & Tools</h4>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >BootStrap</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >Google Dorking</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >HashCat</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >Nmap</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >Docker</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >Git</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm"
+                >GitHub</span
+              >
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-semibold mb-6 flex items-center">
+              <span
+                class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3"
+              >
+                <i class="ri-user-heart-line ri-lg text-primary"></i>
+              </span>
+              Soft Skills
+            </h3>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-team-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Team Collaboration</h4>
+                <p class="text-sm text-gray-600">
+                  Effectively work with diverse teams to achieve common goals.
+                </p>
+              </div>
+
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-presentation-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Communication</h4>
+                <p class="text-sm text-gray-600">
+                  Clear and concise in both written and verbal communication.
+                </p>
+              </div>
+
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-lightbulb-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Problem Solving</h4>
+                <p class="text-sm text-gray-600">
+                  Analytical approach to identify and solve complex problems.
+                </p>
+              </div>
+
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-time-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Time Management</h4>
+                <p class="text-sm text-gray-600">
+                  Efficiently prioritize tasks to meet deadlines consistently.
+                </p>
+              </div>
+
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-creative-commons-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Creativity</h4>
+                <p class="text-sm text-gray-600">
+                  Innovative thinking to develop unique solutions.
+                </p>
+              </div>
+
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3"
+                >
+                  <i class="ri-book-open-line ri-lg text-primary"></i>
+                </div>
+                <h4 class="font-medium mb-2">Adaptability</h4>
+                <p class="text-sm text-gray-600">
+                  Quick to learn new technologies and adjust to changes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6">My Projects</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          Here are some of the projects I've worked on during my academic
+          journey and personal exploration.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card group">
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/car simulation.jpg"
+                alt="Car Simulation"
+                class="w-full h-full object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center project-overlay"
+              >
+                <div class="text-white text-center p-4">
+                  <span class="font-medium">View Details</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-lg mb-2">Car Simulation</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Developed a realistic car simulation using Unity and C#,
+                featuring responsive steering, acceleration, and braking
+                controls. Users can navigate through an interactive city
+                environment, with Unity’s physics engine ensuring smooth,
+                immersive gameplay that closely mimics real-world driving
+                dynamics.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >C#</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >Unity</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card group">
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/bus management.jpg"
+                alt="Bus Management System"
+                class="w-full h-full object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center project-overlay"
+              >
+                <div class="text-white text-center p-4">
+                  <span class="font-medium">View Details</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-lg mb-2">Bus Management System</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Developed a web application for bus reservations with a
+                user-friendly interface, allowing users to easily browse and
+                book available routes. The system integrates a database to
+                manage bus schedules, bookings, and user information. Key
+                features include interactive seat selection, booking
+                confirmation, and a reservation history for users to track their
+                past trips.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >MySql</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 project-card group">
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/movie booking.jpg"
+                alt="Movie Booking System"
+                class="w-full h-full object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center project-overlay"
+              >
+                <div class="text-white text-center p-4">
+                  <span class="font-medium">View Details</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold text-lg mb-2">Movie Booking System</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Developed a web application for booking movie tickets with a
+                user-friendly interface, allowing users to easily browse and
+                book available shows. The system integrates a database to
+                manage movie schedules, bookings, and user information. Key
+                features include seat selection, booking confirmation.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >MySql</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >HTML</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >CSS</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-primary rounded-full text-xs"
+                  >Flask</span
+                >
+              </div>
+              <div class="flex space-x-3">
+                <a
+                  href="https://github.com/donmanuel011/Movie-Ticket-Booking"
+                  class="text-primary hover:text-blue-700 text-sm flex items-center"
+                >
+                  <i class="ri-github-fill ri-sm mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">
+          Education & Achievements
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Education Timeline -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-8 flex items-center">
+              <span
+                class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3"
+              >
+                <i class="ri-graduation-cap-line ri-lg text-primary"></i>
+              </span>
+              Education
+            </h3>
+
+            <div class="space-y-8">
+              <div class="timeline-item pb-8">
+                <h4 class="font-semibold text-lg">
+                  B.Tech in Computer Science Engineering 
+                  Cybersecurity
+                </h4>
+                <p class="text-primary">2023 - Present</p>
+                <p class="text-gray-700 mt-2">
+                  Christ (Deemed to be University), Bengaluru
+                </p>
+                <p class="text-gray-600 mt-1">CGPA: 8.69/10</p>
+                <p class="text-gray-600 mt-2">
+                  Specialization in Internet of Things (IoT) with Honours in
+                  Cybersecurity
+                </p>
+              </div>
+
+              <div class="timeline-item pb-8">
+                <h4 class="font-semibold text-lg">
+                  Higher Secondary Education
+                </h4>
+                <p class="text-primary">2021 - 2023</p>
+                <p class="text-gray-700 mt-2">
+                  Sree Vivekananda Higher Secondary School, Palemad
+                </p>
+                <p class="text-gray-600 mt-1">Percentage: 95.58%</p>
+                <p class="text-gray-600 mt-2">
+                  Science Stream with Computer Science
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h4 class="font-semibold text-lg">10th Grade</h4>
+                <p class="text-primary">2020 - 2021</p>
+                <p class="text-gray-700 mt-2">
+                  Marthoma Higher Secondary School, Chungathara
+                </p>
+                <p class="text-gray-600 mt-1">Grade: Full A+</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Achievements -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-8 flex items-center">
+              <span
+                class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3"
+              >
+                <i class="ri-award-line ri-lg text-primary"></i>
+              </span>
+              Certifications & Achievements
+            </h3>
+
+            <div class="space-y-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">Networking Basics</h4>
+                <p class="text-gray-600 text-sm">Cisco</p>
+                <p class="text-gray-600 text-sm mt-1"></p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">
+                  Configure And Test Basic : Network connectivity
+                </h4>
+                <p class="text-gray-600 text-sm">Coursera</p>
+                <p class="text-gray-600 text-sm mt-1"> 
+
+                </p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">Introduction to MongoDB For Students</h4>
+                <p class="text-gray-600 text-sm">MongoDB</p>
+                <p class="text-gray-600 text-sm mt-1">
+                
+                </p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">
+                 Networking Devices
+                </h4>
+                <p class="text-gray-600 text-sm">Skillsoft</p>
+                <p class="text-gray-600 text-sm mt-1">
+                  
+                </p>
+              </div>
+
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">Operating System Course: Learn Fundamentals of Operating System</h4>
+                <p class="text-gray-600 text-sm">
+                 Scaler
+                </p>
+                <p class="text-gray-600 text-sm mt-1">
+                  
+                </p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold">Build Your Own ChatBot</h4>
+                <p class="text-gray-600 text-sm">
+                Cognitive Class
+                </p>
+                <p class="text-gray-600 text-sm mt-1">
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+        <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-8">
+            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                    >
+                        <i class="ri-mail-line ri-lg text-primary"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-900">Email</h4>
+                        <p class="text-gray-600">donmanuelfrancy@gmail.com</p>
+                        <p class="text-gray-600">don.manuel@btech.christuniverity.in</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-phone-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Phone</h4>
+                    <p class="text-gray-600">+91 9383445246</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-map-pin-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Location</h4>
+                    <p class="text-gray-600">Bangalore, India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-100"
+            >
+              <h3 class="text-xl font-semibold mb-6">Follow Me</h3>
+
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="https://github.com/donmanuel011"
+                  class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                >
+                  <i class="ri-github-fill ri-lg text-gray-700"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/don-manuel-francy-/"
+                  class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                >
+                  <i class="ri-linkedin-fill ri-lg text-gray-700"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/don_manuelx.10?igsh=MXJ0ajlsNHkzOTE1Ng== "
+                  class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                >
+                  <i class="ri-instagram-fill ri-lg text-gray-700"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <a
+              href="#"
+              class="text-2xl font-['Pacifico'] text-white mb-4 inline-block"
+              >Don Manuel Francy</a
+            >
+            <p class="text-gray-400 mb-6">
+              B.Tech in Computer Science Engineering
+              <br />
+              Passionate about building innovative solutions.
+                <br />
+                Cybersecurity Enthusiast
+                <br />
+                Internet of Things (IoT) Specialist
+            </p>
+            <p class="text-gray-400">
+              &copy; 2025 Don Manuel Francy. All rights reserved.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#education"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            Designed and built by Don Manuel Francy | Last updated: May 20, 2025
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-github-fill ri-lg"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-linkedin-fill ri-lg"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-twitter-fill ri-lg"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="ri-instagram-fill ri-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300"
+    >
+      <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
