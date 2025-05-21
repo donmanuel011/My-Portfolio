@@ -50,4 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Animate skill items
+  const skillItems = document.querySelectorAll("#skillsList > div");
+  skillItems.forEach((item, idx) => {
+    setTimeout(() => {
+      item.classList.remove("opacity-0", "translate-y-2");
+      item.classList.add("opacity-100", "translate-y-0");
+    }, 300 * idx);
+  });
+
+  // Set location text
+  const projectText = document.getElementById("projectText");
+  if (projectText) {
+    projectText.innerHTML =
+      '<i class="ri-map-pin-line mr-1"></i>Bangalore, India';
+  }
 });
+// (No script was present in the provided index.html excerpt, so no script to move. If you have inline JS for the terminal or hero section, please provide it or clarify.)

@@ -120,54 +120,57 @@ textarea:focus {
   transform: scale(1.05);
 }
 
+/* Floating icon and terminal animation styles moved from index.html */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes float-fast {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-delayed 3.5s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 2.5s ease-in-out infinite;
+}
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 body.light-theme {
   background-color: #fff;
   color: #222;
-}
-body.dark-theme {
-  background-color: #18181b;
-  color: #f3f4f6;
-}
-body.dark-theme button,
-body.dark-theme .btn,
-body.dark-theme [type="button"],
-body.dark-theme [type="submit"],
-body.dark-theme [role="button"] {
-  background-color: #2563eb !important;
-  color: #fff !important;
-  border: none;
-}
-body.dark-theme button:hover,
-body.dark-theme .btn:hover,
-body.dark-theme [type="button"]:hover,
-body.dark-theme [type="submit"]:hover,
-body.dark-theme [role="button"]:hover {
-  background-color: #1d4ed8 !important;
-  color: #fff !important;
-}
-body.dark-theme input,
-body.dark-theme textarea,
-body.dark-theme select {
-  background-color: #23272f !important;
-  color: #f3f4f6 !important;
-  border-color: #374151 !important;
-}
-body.dark-theme input::placeholder,
-body.dark-theme textarea::placeholder {
-  color: #94a3b8 !important;
-}
-body.dark-theme .project-overlay,
-body.dark-theme .modal,
-body.dark-theme .dropdown,
-body.dark-theme .menu {
-  background-color: #23272f !important;
-  color: #f3f4f6 !important;
-}
-body.dark-theme .card,
-body.dark-theme .content,
-body.dark-theme .section,
-body.dark-theme .container {
-  background-color: inherit !important;
-  color: inherit !important;
 }
